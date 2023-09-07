@@ -39,6 +39,15 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 
 ### Graphical Descriptive Results
 
+### Plot boxplots
+
+```{r}
+basicCN <- ggplot(mydata,aes(x=position,y=pushups))
+```
+
+```{r}
+basicCN + geom_boxplot(notch=FALSE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
+```
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
